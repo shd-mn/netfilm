@@ -1,3 +1,5 @@
+import HomePage from "@/container/home";
+
 export default function Home() {
-    return <main>Netfilm</main>;
+  return <HomePage />;
 }
