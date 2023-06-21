@@ -1,15 +1,9 @@
-import Image from "next/image";
+import Hero from "./Hero";
+import Movies from '@/mocks/movies.json';
 const HomePage = () => {
   return (
-    <div className="container h-[2000px]">
-      <Image
-        className="absolute left-0 top-0 -z-10 h-1/2 w-full object-cover lg:h-screen"
-        src="/Shadow.jpg"
-        alt="bg"
-        width={1920}
-        height={1080}
-      />
-      HomePage
+    <div className="h-[2000px]" >
+      <Hero movie={Movies.results[0]} isCompact/>
     </div>
   );
 };
