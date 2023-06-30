@@ -26,7 +26,11 @@ module.exports = {
         "2xl": "1800px",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        "transparent-black": "#18181b59",
+      },
+    },
   },
   plugins: [],
 };
