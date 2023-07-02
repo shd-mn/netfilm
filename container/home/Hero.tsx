@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { Result } from "@/utils/movieProps";
+import { MovieResult } from "@/utils/movieProps";
 
 type Props = {
-  movie: Result;
+  movie: MovieResult;
 };
 const Hero: React.FC<Props> = ({ movie }) => {
   const src = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
@@ -15,6 +15,7 @@ const Hero: React.FC<Props> = ({ movie }) => {
         alt="bg"
         width={1920}
         height={1080}
+        priority
       />
       <div className="container flex h-full pt-20">
         <div className="flex w-1/2 flex-col items-start justify-center gap-2">

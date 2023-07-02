@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Result } from "@/utils/movieProps";
+import { MovieResult } from "@/utils/movieProps";
 type Props = {
-  movie: Result;
+  movie: MovieResult;
 };
 
 const MovieCard: React.FC<Props> = ({ movie }) => {
   return (
     <Link
       href={`/movie/${movie.id}`}
-      className="pry-transition group  relative w-[400px] flex-1 rounded-lg hover:scale-105"
+      className="pry-transition group relative max-w-[400px] flex-1 rounded-lg hover:scale-105"
     >
       <Image
         className="rounded-t-lg object-cover"
