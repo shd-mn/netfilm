@@ -1,7 +1,16 @@
 import Link from "next/link";
+import { getMovieGenres, getTvShowGenres } from "@/services/fetchData";
+import GenreList from "./GenreList";
 import { BsFillPlayCircleFill, BsSearch } from "react-icons/bs";
 import { IoPersonCircleSharp, IoPersonSharp, IoSearch } from "react-icons/io5";
-const Header = () => {
+
+const Header = async () => {
+  const movieGenresPromise = getMovieGenres();
+  const tvGenresPromise = getTvShowGenres();
+
+  const [{ genres: movieGenres }, { genres: tvShowGenres }] = await Promise.all(
+    [movieGenresPromise, tvGenresPromise]
+  );
   return (
     <header className="absolute top-0 z-50 w-full bg-transparent-black backdrop-blur-sm">
       <div className="container flex h-20 items-center justify-between ">
@@ -12,11 +21,19 @@ const Header = () => {
           <BsFillPlayCircleFill className="fill-red-600 " />
           NETFILM
         </Link>
-        <nav className="flex gap-8">
-          <div>
-            <Link href="/movies">Movies</Link>
+        <nav className="flex h-full items-center gap-8">
+          <div className="group relative flex h-full items-center">
+            <button className="p-2" type="button">
+              Movies
+            </button>
+            <GenreList genres={movieGenres} />
           </div>
-          <Link href="/tv-shows">Tv Shows</Link>
+          <div className="group relative flex h-full items-center">
+            <button className="p-2" type="button">
+              Tv Shows
+            </button>
+            <GenreList genres={tvShowGenres} />
+          </div>
         </nav>
         <div className="flex items-center gap-2">
           <button type="button">
