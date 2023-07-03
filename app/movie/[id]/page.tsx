@@ -9,7 +9,7 @@ type Props = {
 
 const MoviePage: React.FC<Props> = ({ params, searchParams }) => {
   // const id = params.id;
-  if (params.id !== "12345") {
+  if (params.id === "") {
     return <NotFound />;
   }
 

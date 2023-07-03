@@ -26,13 +26,13 @@ const Header = async () => {
             <button className="p-2" type="button">
               Movies
             </button>
-            <GenreList genres={movieGenres} />
+            <GenreList pathname="/movies/" genres={movieGenres} />
           </div>
           <div className="group relative flex h-full items-center">
             <button className="p-2" type="button">
               Tv Shows
             </button>
-            <GenreList genres={tvShowGenres} />
+            <GenreList pathname="/tv-shows/" genres={tvShowGenres} />
           </div>
         </nav>
         <div className="flex items-center gap-2">
