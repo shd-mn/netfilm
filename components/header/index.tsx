@@ -11,6 +11,7 @@ const Header = () => {
 
         <Navbar />
 
+        <HeaderAction />
 
       </div>
     </header>
