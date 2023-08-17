@@ -9,7 +9,8 @@ const Header = () => {
       <div className="container flex h-20 items-center justify-between">
         <Logo />
 
-      
+        <Navbar />
+
 
       </div>
     </header>
