@@ -1,10 +1,13 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { Suspense } from "react";
 import Loading from "./feed/loading";
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "Netfilm",
@@ -18,11 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${manrope.className} bg-black-06`}>
         <Header />
-        <Suspense fallback={<Loading />}>
-          <main className="flex-1">{children}</main>
-        </Suspense>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
       </body>
     </html>
