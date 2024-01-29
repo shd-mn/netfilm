@@ -6,7 +6,7 @@ import {
 import Hero from "./Hero";
 import MoviesSection from "./MoviesSection";
 
-async function HomePage() {
+async function Home() {
   const popularPromise = getPopularMovies();
   const topRatedPromise = getTopRatedMovies();
   const upComingPromise = getUpcomingMovies();
@@ -26,4 +26,4 @@ async function HomePage() {
     </div>
   );
 }
-export default HomePage;
+export default Home;
