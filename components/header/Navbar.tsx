@@ -1,28 +1,36 @@
-import React from "react";
-import { getMovieGenres, getTvShowGenres } from "@/services/fetchData";
-import GenreList from "./GenreList";
+"use client";
+import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+// import { getMovieGenres, getTvShowGenres } from "@/services/fetchData";
+// import GenreList from "./GenreList";
 
-const Navbar = async () => {
-  const movieGenresPromise = getMovieGenres();
-  const tvGenresPromise = getTvShowGenres();
+const Navbar = () => {
+  const [activeLink, setActiveLink] = useState();
+  // const movieGenresPromise = getMovieGenres();
+  // const tvGenresPromise = getTvShowGenres();
 
-  const [{ genres: movieGenres }, { genres: tvShowGenres }] = await Promise.all(
-    [movieGenresPromise, tvGenresPromise]
-  );
+  // const [{ genres: movieGenres }, { genres: tvShowGenres }] = await Promise.all(
+  //   [movieGenresPromise, tvGenresPromise]
+  // );
+  const ur = usePathname();
   return (
-    <nav className="flex h-full items-center gap-8">
-      <div className="group relative flex h-full items-center">
-        <button className="p-2" type="button">
-          Movies
-        </button>
-        <GenreList pathname="/movies/" genres={movieGenres} />
-      </div>
-      <div className="group relative flex h-full items-center">
-        <button className="p-2" type="button">
-          Tv Shows
-        </button>
-        <GenreList pathname="/tv-shows/" genres={tvShowGenres} />
-      </div>
+    <nav className="flex items-center gap-3 rounded-xl border-4 border-black-12 px-10 py-[10px]">
+      <Link href="/" className="p-2 text-lg">
+        Home
+      </Link>
+      <Link
+        href="/movies"
+        className="rounded-lg bg-black-10 px-6 py-[14px] text-lg font-medium"
+      >
+        Movies
+      </Link>
+      <Link href="/" className="p-2 text-lg">
+        Support
+      </Link>
+      <Link href="/" className="p-2 text-lg">
+        Subscriptions
+      </Link>
     </nav>
   );
 };
