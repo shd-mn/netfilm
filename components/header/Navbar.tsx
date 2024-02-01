@@ -7,16 +7,10 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState();
-  // const movieGenresPromise = getMovieGenres();
-  // const tvGenresPromise = getTvShowGenres();
 
-  // const [{ genres: movieGenres }, { genres: tvShowGenres }] = await Promise.all(
-  //   [movieGenresPromise, tvGenresPromise]
-  // );
-  const ur = usePathname();
   return (
-    <nav className="flex items-center gap-3 rounded-xl border-4 border-black-12 px-10 py-[10px]">
-      <Link href="/" className="p-2 text-lg">
+    <nav className="flex items-center gap-x-5 rounded-xl border-4 border-black-12 bg-black-06 px-10 py-[10px]">
+      <Link href="/" className="text-lg text-grey-75">
         Home
       </Link>
       <Link
@@ -25,10 +19,10 @@ const Navbar = () => {
       >
         Movies
       </Link>
-      <Link href="/" className="p-2 text-lg">
+      <Link href="/" className="text-lg text-grey-75">
         Support
       </Link>
-      <Link href="/" className="p-2 text-lg">
+      <Link href="/" className="text-lg text-grey-75">
         Subscriptions
       </Link>
     </nav>
