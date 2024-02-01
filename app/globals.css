@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply max-w-[1800px];
-  }
-
   .btn-fill {
     @apply rounded-lg bg-red-600 px-9 py-3 font-semibold text-white shadow-md hover:bg-red-700;
   }
@@ -14,21 +10,4 @@
   .pry-transition {
     @apply transition-all duration-200 ease-in-out;
   }
-}
-
-:root {
-  --foreground: #fff;
-  --background: #131118;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
-
-body {
-  @apply flex h-screen flex-col;
-  color: var(--foreground);
-  background: var(--background);
 }
