@@ -1,12 +1,8 @@
-import Hero from "@/components/Hero";
 import React from "react";
+import Movies from "@/container/Movies";
 
-function Movies() {
-  return (
-    <main>
-      <Hero />
-    </main>
-  );
+function MoviesPage() {
+  return <Movies />;
 }
 
-export default Movies;
+export default MoviesPage;

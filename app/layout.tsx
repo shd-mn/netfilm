@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-black-06`}>
+      <body className={`${manrope.className} bg-black-08 text-white`}>
         <Header />
         <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
