@@ -1,4 +1,4 @@
-export interface GenreProps {
+export interface GenreTypes {
   genres: Genres[];
 }
 

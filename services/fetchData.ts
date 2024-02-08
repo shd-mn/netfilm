@@ -1,6 +1,6 @@
 import axios from "axios";
-import { MovieTypes } from "@/utils/movieTypes";
-import { GenreProps } from "@/utils/genreProps";
+import type { MovieTypes } from "@/utils/movieTypes";
+import type { GenreTypes } from "@/utils/genreTypes";
 
 const API_URL = "https://api.themoviedb.org/3";
 
@@ -35,11 +35,11 @@ const getTopRatedMovies = async () => {
 };
 
 const getMovieGenres = async () => {
-  const data: GenreProps = await fetchData("/genre/movie/list");
+  const data: GenreTypes = await fetchData("/genre/movie/list");
   return data;
 };
 const getTvShowGenres = async () => {
-  const data: GenreProps = await fetchData("/genre/tv/list");
+  const data: GenreTypes = await fetchData("/genre/tv/list");
   return data;
 };
 const discoverMovies = async (query: string) => {
