@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import NavButton from "./UI/NavButton";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
-import type { Genres } from "@/utils/genreProps";
+import type { Genres } from "@/utils/genreTypes";
 
 type PropTypes = {
   genres: Genres[];
@@ -36,7 +36,7 @@ function GenreSlider({ genres }: PropTypes) {
   };
 
   return (
-    <div className="mb-24">
+    <div className="mb-20">
       <header className="mb-12 flex items-center justify-between">
         <h2 className="text-4xl font-bold">Our Genres</h2>
         <div className="flex items-center gap-4 rounded-xl border border-black-12 bg-black-06 p-4">

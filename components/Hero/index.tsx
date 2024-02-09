@@ -43,7 +43,7 @@ const Hero = ({ movies }: PropTypes) => {
             <h2 className="mb-2 text-4xl font-bold text-white">
               {cover?.title}
             </h2>
-            <p className="w-full text-center line-clamp-2 text-lg font-medium text-grey-60">
+            <p className="line-clamp-2 w-full px-36 text-center text-lg font-medium text-grey-60">
               {cover.overview}
             </p>
           </div>
@@ -93,7 +93,7 @@ const Hero = ({ movies }: PropTypes) => {
             handleNextSlide={handleNextSlide}
           />
         </div>
-        <figure className="relative h-full w-full">
+        <figure className="border-3 relative h-full w-full overflow-hidden rounded-xl border-black-08">
           <span className="absolute bottom-0 flex h-2/3 w-full rounded-xl bg-gradient-to-b from-transparent to-black-06"></span>
           <Image
             src={`https://image.tmdb.org/t/p/original/${cover?.backdrop_path}`}

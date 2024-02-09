@@ -4,7 +4,7 @@ import Logo from "../common/Logo";
 
 const Header = () => {
   return (
-    <header className="h-28 py-5 w-full backdrop-blur-sm mb-12">
+    <header className="h-28 py-5 w-full mb-12">
       <div className="container flex h-20 items-center justify-between">
         <Logo />
 

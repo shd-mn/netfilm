@@ -1,5 +1,5 @@
 import GenreSlider from "@/components/GenreSlider";
-import { Genres } from "@/utils/genreProps";
+import { Genres } from "@/utils/genreTypes";
 import React from "react";
 
 type PropTypes = {

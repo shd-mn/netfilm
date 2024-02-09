@@ -1,5 +1,5 @@
 import React from "react";
-import { Genres } from "@/utils/genreProps";
+import { Genres } from "@/utils/genreTypes";
 import Link from "next/link";
 type Props = {
   pathname: string;
@@ -7,7 +7,7 @@ type Props = {
 };
 const GenreList: React.FC<Props> = ({ pathname, genres }) => {
   return (
-    <div className="invisible absolute top-full grid w-96 grid-cols-2 gap-2  rounded-md bg-slate-600 p-2  group-hover:visible">
+    <div className="invisible absolute top-full grid w-96 grid-cols-2 gap-2  rounded-md bg-slate-600 p-2 group-hover:visible">
       {genres.map((item) => (
         <Link
           key={item.id}
