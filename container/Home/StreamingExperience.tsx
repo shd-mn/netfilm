@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SectionHeader from "./components/SectionHeader";
-import { streamingData, streamingHeaderData } from "./constants";
+import { streamingData, streamingHeaderData } from "./data/streamingExpData";
 
 function StreamingExperience() {
   return (
@@ -23,7 +23,7 @@ function StreamingExperience() {
                     height={40}
                   />
                 </figure>
-                <h4>{item.title}</h4>
+                <h4 className="text-2xl font-bold">{item.title}</h4>
               </div>
               <p>{item.desc}</p>
             </article>
