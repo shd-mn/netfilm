@@ -1,24 +1,30 @@
 "use client";
-import Button from "@/components/UI/Button";
+import { useState } from "react";
 import SectionHeader from "./components/SectionHeader";
-import { questionsHeaderData } from "./constants";
-import { HiPlay } from "react-icons/hi2";
+import Dropdown from "./components/Dropdown";
+import Button from "@/components/UI/Button";
+import { questionsData, questionsHeaderData } from "./data/questionsData";
 
 function Questions() {
+  const [active, setActive] = useState<number | null>(null);
   const handleClick = () => {};
   return (
     <section className="mb-36">
       <div className="container">
         <SectionHeader
           data={questionsHeaderData}
-          element={
-            <Button
-              title="Ask a Question"
-              icon={<HiPlay size={22} />}
-              handleClick={handleClick}
-            />
-          }
+          element={<Button title="Ask a Question" handleClick={handleClick} />}
         />
+        <div className="grid grid-cols-2 gap-x-20">
+          {questionsData.map((question) => (
+            <Dropdown
+              key={question.id}
+              data={question}
+              active={active}
+              setActive={setActive}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
