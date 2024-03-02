@@ -1,8 +1,11 @@
 "use client";
-import Button from "@/components/UI/Button";
 import SectionHeader from "./components/SectionHeader";
-import { subscriptionsHeaderData } from "./constants";
 import { Dispatch, SetStateAction, useState } from "react";
+import {
+  subscriptionData,
+  subscriptionsHeaderData,
+} from "./data/subscriptionData";
+import Plan from "./components/Plan";
 
 function Subscriptions() {
   const [plan, setPlan] = useState<"monthly" | "yearly">("monthly");
@@ -14,6 +17,11 @@ function Subscriptions() {
           data={subscriptionsHeaderData}
           element={<BtnGroup plan={plan} setPlan={setPlan} />}
         />
+        <div className="grid grid-cols-3 gap-x-5">
+          {subscriptionData[plan].map((item, idx) => (
+            <Plan key={idx} data={item} plan={plan} />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -37,7 +45,9 @@ export const BtnGroup = ({ plan, setPlan }: BtnGroupType) => {
         Monthly
       </button>
       <button
-        className={`h-14 rounded-[10px] px-6 ${plan === "yearly" && "bg-black-12"}`}
+        className={`h-14 rounded-[10px] px-6 ${
+          plan === "yearly" && "bg-black-12"
+        }`}
         type="button"
         onClick={() => setPlan("yearly")}
       >
