@@ -1,8 +1,12 @@
 import { ReactNode } from "react";
-import { headerDataType } from "../constants";
+
+type headerData = {
+  title: string;
+  desc: string;
+};
 
 type PropTypes = {
-  data: headerDataType;
+  data: headerData;
   element?: ReactNode;
 };
 
