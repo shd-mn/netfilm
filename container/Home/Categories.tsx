@@ -1,6 +1,6 @@
 import SectionHeader from "./components/SectionHeader";
 import GenreSlider from "@/components/GenreSlider";
-import { categoriesHeader } from "./constants";
+import { categoriesHeader } from "./data/categoriesData";
 import type { Genres } from "@/utils/genreTypes";
 
 function Categories({ genres }: { genres: Genres[] }) {
