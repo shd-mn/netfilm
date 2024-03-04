@@ -11,12 +11,12 @@ function Button({
   title,
   icon,
   handleClick,
-  color = "bg-primary-45",
+  color = "bg-primary-45 hover:bg-primary-55",
 }: PropTypes) {
   return (
     <button
       type="button"
-      className={`flex h-14 px-6 items-center gap-2 rounded-lg border-2 border-black-15 ${color}`}
+      className={`flex h-14 items-center gap-2 rounded-lg  px-6 ${color}`}
       onClick={() => handleClick()}
     >
       {icon && <span className="flex items-center justify-center">{icon}</span>}

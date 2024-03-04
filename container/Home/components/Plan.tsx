@@ -21,7 +21,7 @@ function Plan({ data, plan }: PropTypes) {
       <div className="flex items-center gap-4">
         <Button
           title="Start Free Trial"
-          color="bg-black-08"
+          color="bg-black-08 hover:bg-black-12 border-2 border-black-15"
           handleClick={handleClick}
         />
         <Button title="Choose Plan" handleClick={handleClick} />
