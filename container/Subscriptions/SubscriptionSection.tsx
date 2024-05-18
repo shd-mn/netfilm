@@ -1,17 +1,17 @@
 "use client";
-import SectionHeader from "./components/SectionHeader";
+import SectionHeader from "../Home/components/SectionHeader";
 import { Dispatch, SetStateAction, useState } from "react";
 import {
   subscriptionData,
   subscriptionsHeaderData,
 } from "./data/subscriptionData";
-import Plan from "./components/Plan";
+import Plan from "../Home/components/Plan";
 
-function Subscriptions() {
+function SubscriptionSection() {
   const [plan, setPlan] = useState<"monthly" | "yearly">("monthly");
   const handleClick = () => {};
   return (
-    <section className="mb-36">
+    <section className="mb-36" id="pricing">
       <div className="container">
         <SectionHeader
           data={subscriptionsHeaderData}
@@ -57,4 +57,4 @@ export const BtnGroup = ({ plan, setPlan }: BtnGroupType) => {
   );
 };
 
-export default Subscriptions;
+export default SubscriptionSection;
