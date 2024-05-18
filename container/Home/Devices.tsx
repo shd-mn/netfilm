@@ -1,14 +1,14 @@
 import Image from "next/image";
 import SectionHeader from "./components/SectionHeader";
-import { streamingData, streamingHeaderData } from "./data/streamingExpData";
+import { devicesData, devicesHeaderData } from "./data/devicesData";
 
-function StreamingExperience() {
+function Devices() {
   return (
-    <section className="mb-36">
+    <section className="mb-36" id="devices">
       <div className="container">
-        <SectionHeader data={streamingHeaderData} />
+        <SectionHeader data={devicesHeaderData} />
         <div className="grid grid-cols-3 gap-8">
-          {streamingData.map((item, idx) => (
+          {devicesData.map((item, idx) => (
             <article
               key={idx}
               className="flex flex-col rounded-xl border-2 border-black-15 bg-gradient-to-bl from-primary-45/10 to-transparent to-45% p-12"
@@ -34,4 +34,4 @@ function StreamingExperience() {
   );
 }
 
-export default StreamingExperience;
+export default Devices;
