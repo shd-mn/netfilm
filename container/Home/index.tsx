@@ -1,9 +1,10 @@
 import { getMovieGenres } from "@/services/fetchData";
 import Hero from "./Hero";
-import StreamingExperience from "./StreamingExperience";
+import Devices from "./Devices";
 import Questions from "./Questions";
 import Categories from "./Categories";
-import Subscriptions from "./Subscriptions";
+import SubscriptionSection from "../Subscriptions/SubscriptionSection";
+import Banner from "@/components/common/Banner";
 
 async function Home() {
   const { genres: movieGenre } = await getMovieGenres();
@@ -12,9 +13,10 @@ async function Home() {
     <main>
       <Hero />
       <Categories genres={movieGenre} />
-      <StreamingExperience />
+      <Devices />
       <Questions />
-      <Subscriptions />
+      <SubscriptionSection />
+      <Banner />
     </main>
   );
 }
