@@ -9,7 +9,7 @@ function Questions() {
   const [active, setActive] = useState<number | null>(null);
   const handleClick = () => {};
   return (
-    <section className="mb-36">
+    <section className="mb-36" id="faq">
       <div className="container">
         <SectionHeader
           data={questionsHeaderData}

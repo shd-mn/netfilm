@@ -1,5 +1,5 @@
 import Button from "@/components/UI/Button";
-import type { SubscriptionOptionType } from "../data/subscriptionData";
+import type { SubscriptionOptionType } from "../../Subscriptions/data/subscriptionData";
 
 type PropTypes = {
   data: SubscriptionOptionType;
@@ -7,7 +7,7 @@ type PropTypes = {
 };
 
 function Plan({ data, plan }: PropTypes) {
-  const handleClick = () => {};
+  const handleClick = () => { };
   return (
     <article className="rounded-xl border-2 border-black-15 bg-black-10 p-12">
       <h4 className="mb-4 text-2xl font-bold">{data.title}</h4>

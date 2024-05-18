@@ -5,7 +5,7 @@ import type { Genres } from "@/utils/genreTypes";
 
 function Categories({ genres }: { genres: Genres[] }) {
   return (
-    <section className="mb-36">
+    <section className="mb-36" id="categories">
       <div className="container">
         <SectionHeader data={categoriesHeader} />
       </div>

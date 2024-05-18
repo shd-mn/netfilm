@@ -2,9 +2,9 @@ import Navbar from "./Navbar";
 import HeaderAction from "./HeaderAction";
 import Logo from "../common/Logo";
 
-const Header = () => {
+export default function Header() {
   return (
-    <header className="h-28 py-5 w-full mb-12">
+    <header className="mb-20 h-28 w-full py-5">
       <div className="container flex h-20 items-center justify-between">
         <Logo />
 
@@ -14,5 +14,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-export default Header;
+}

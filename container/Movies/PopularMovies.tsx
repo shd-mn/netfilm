@@ -31,7 +31,7 @@ function PopularMovies({ movies }: PropTypes) {
   };
 
   return (
-    <div className="mb-24">
+    <section className="mb-24" id="popular">
       <header className="mb-12 flex items-center justify-between">
         <h2 className="text-4xl font-bold">Our Genres</h2>
         <div className="flex items-center gap-4 rounded-xl border border-black-12 bg-black-06 p-4">
@@ -71,7 +71,7 @@ function PopularMovies({ movies }: PropTypes) {
           </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

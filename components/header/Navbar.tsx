@@ -19,10 +19,10 @@ const Navbar = () => {
       >
         Movies
       </Link>
-      <Link href="/" className="text-lg text-grey-75">
+      <Link href="/support" className="text-lg text-grey-75">
         Support
       </Link>
-      <Link href="/" className="text-lg text-grey-75">
+      <Link href="/subscriptions" className="text-lg text-grey-75">
         Subscriptions
       </Link>
     </nav>

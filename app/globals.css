@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .btn-fill {
     @apply rounded-lg bg-red-600 px-9 py-3 font-semibold text-white shadow-md hover:bg-red-700;
