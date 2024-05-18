@@ -5,6 +5,7 @@ import PopularMovies from "./PopularMovies";
 import MoviesGenre from "./MoviesGenre";
 import type { MovieTypes } from "@/utils/movieTypes";
 import type { GenreTypes } from "@/utils/genreTypes";
+import Banner from "@/components/common/Banner";
 
 async function Movies() {
   const movieData = getPopularMovies();
@@ -24,6 +25,7 @@ async function Movies() {
           <PopularMovies movies={popularMovies} />
         </div>
       </section>
+      <Banner />
     </main>
   );
 }
