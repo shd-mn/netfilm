@@ -1,0 +1,30 @@
+.mySwiper {
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: auto;
+  bottom: 0 !important;
+  width: 100px;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: 100px;
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  height: var(--swiper-navigation-size);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}

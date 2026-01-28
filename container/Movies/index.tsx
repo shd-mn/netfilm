@@ -1,11 +1,12 @@
 import React from "react";
 import { getMovieGenres, getPopularMovies } from "@/services/fetchData";
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 import PopularMovies from "./PopularMovies";
 import MoviesGenre from "./MoviesGenre";
 import type { MovieTypes } from "@/utils/movieTypes";
 import type { GenreTypes } from "@/utils/genreTypes";
 import Banner from "@/components/common/Banner";
+import Hero from "./Hero";
 
 async function Movies() {
   const movieData = getPopularMovies();
@@ -18,7 +19,8 @@ async function Movies() {
 
   return (
     <main>
-      <Hero movies={popularMovies} />
+      <Hero movies={popularMovies.slice(0, 5)} />
+      {/* <Hero movies={popularMovies} /> */}
       <section className="mb-44">
         <div className="container rounded-xl border-2 border-black-15 p-12">
           <MoviesGenre genres={movieGenre} />

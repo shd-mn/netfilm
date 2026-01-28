@@ -4,7 +4,7 @@ import Logo from "../common/Logo";
 
 export default function Header() {
   return (
-    <header className="mb-20 h-28 w-full py-5">
+    <header className="mb-14 h-28 w-full py-5">
       <div className="container flex h-20 items-center justify-between">
         <Logo />
 

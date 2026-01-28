@@ -17,7 +17,7 @@ export default function Form() {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
-  console.log(watch("firstName")); // watch input value by passing the name of it
+  // console.log(watch("firstName")); // watch input value by passing the name of it
 
   return (
     <form
